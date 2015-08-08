@@ -17,6 +17,6 @@ test = x_train["Project_Valuation"].order()
 test = test.apply(lambda x: log_method(x))
 
 mean = sum(test) / len(test)
-varience = sum((average - value) ** 2 for value in test) / len(test)
+variance = sum((average - value) ** 2 for value in test) / len(test)
 sigma = math.sqrt(variance)
 plt.plot(test,mlab.normpdf(test,mean,sigma))
